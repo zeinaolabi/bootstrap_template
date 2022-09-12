@@ -24,6 +24,10 @@ nav h1{
     font-size: 1.8rem;
 }
 
+nav ul li:hover{
+    color: #17BC9B;
+}
+
 .menu{
     list-style-type: none;
     display: flex;
