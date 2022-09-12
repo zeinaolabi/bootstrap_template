@@ -38,3 +38,9 @@ function validatePhoneNumber(phoneNumber, error){
         error.textContent="Error: Invalid phone number"
     }
 }
+
+function ValidateMessage(message, error){
+    if(message.trim().length < 100){
+        error.textContent="Error: Minimum message is 100 characters"
+    }
+}
