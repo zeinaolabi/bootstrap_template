@@ -102,6 +102,7 @@ nav h1{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-bottom: 8vh;
     flex: 1 1 35vw;
 }
 
@@ -112,7 +113,7 @@ nav h1{
     border-radius: 8%;
 }
 
-.portfolio_title{
+.sub_title{
     padding-top: 8vh;
     color: #2D3E4F;
     font-size: 3rem;
@@ -122,6 +123,47 @@ nav h1{
 .images img:hover{
     filter: brightness(50%);
 }
-
 /*End of Portfolio section*/
+
+/*Start of About section*/
+.about_section{
+    padding: 0 11vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #17BC9B;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    color: white;
+}
+
+.info p{
+    width: 27vw;
+    line-height: 3vh;
+}
+
+.download_button{
+    padding: 1.5vh 2vw;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    margin-top: 4vh;
+    margin-bottom: 8vh;
+    border-radius: 5px;
+}
+
+.download_button:hover{
+    color: black;
+    background-color: white;
+}
+
+.white{
+    color: white;
+}
 
