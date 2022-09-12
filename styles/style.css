@@ -263,4 +263,12 @@ a{
 a:hover{
     color:#12987d;
 }
+/*End of Reach us section*/
+
+footer{
+    background-color: #1A252F;
+    color: white;
+    text-align: center;
+    padding: 3vh;
+}
 
