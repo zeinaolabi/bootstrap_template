@@ -6,7 +6,9 @@ const message = document.getElementById("message");
 const error = document.getElementById("error");
 const submitButton = document.getElementById("submit");
 
+//When the button is clicked, validate input
 submitButton.addEventListener("click", (event)=>{
+    //If one of the functions return false, stop
     if(!validateName() || !validateEmail() || !validatePhoneNumber() || !validateMessage()){
         return
     }
@@ -16,6 +18,7 @@ submitButton.addEventListener("click", (event)=>{
 })
 
 function validateName(){
+    //Check if the name is a string and has more than 5 characters
     if(username.value == ""){
         error.textContent="Error: Missing field" 
         return false
@@ -32,6 +35,7 @@ function validateName(){
 }
 
 function validateEmail(){
+    //Check if the email is valid and has 3 characters after the @ and 5 after
     if(email.value == ""){
         error.textContent="Error: Missing field" 
         return false
@@ -46,6 +50,7 @@ function validateEmail(){
 }
 
 function validatePhoneNumber(){
+    //Check if the phone number is valid by comparing the country code and the length of the phone number
     if(phoneNumber.value == ""){
         error.textContent="Error: Missing field" 
         return false
@@ -68,6 +73,7 @@ function validatePhoneNumber(){
 }
 
 function validateMessage(){
+    //Check if the message has at least 100 characters
     if(message.value.trim().length < 100){
         error.textContent="Error: Minimum message is 100 characters"
         return false
