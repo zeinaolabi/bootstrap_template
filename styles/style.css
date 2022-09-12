@@ -15,12 +15,12 @@ nav{
     background-color: #2D3E4F;
     color: white;
     text-transform: uppercase;
-    padding: 4vh 12vw;
+    padding: 3.5vh 11vw;
     font-weight: bold;
 }
 
-.title{
-    font-size: 28px;
+nav h1{
+    font-size: 1.8rem;
 }
 
 .menu{
@@ -32,3 +32,53 @@ nav{
     float: left;
     padding: 0 1vw;
 }
+
+/*Start of hero section*/
+.hero_section{
+    padding: 10vh 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #17BC9B;
+    color: white;
+}
+
+.hero_section img{
+    width: 26vw;
+    height: 26vh;
+}
+
+.divider{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5vh 0;
+}
+
+.divider hr{
+    width: 30%;
+    border: none;
+    border-top: 4px solid white;
+    border-radius: 10px;
+}
+
+.divider img{
+    width: 38px;
+    height: 38px;
+    padding: 0 1vw;
+}
+
+.title{
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding-top: 4vh;
+}
+
+.hero_section p{
+    padding-top: 1vh;
+    font-size: 1.5rem;
+}
+
