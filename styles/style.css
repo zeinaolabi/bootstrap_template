@@ -156,6 +156,7 @@ nav h1{
     margin-top: 4vh;
     margin-bottom: 8vh;
     border-radius: 5px;
+    outline: none;
 }
 
 .download_button:hover{
@@ -165,6 +166,7 @@ nav h1{
 
 .white{
     color: white;
+    text-transform: uppercase;
 }
 /*End of About section*/
 
@@ -180,16 +182,16 @@ nav h1{
 .contact_info{
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    align-items: left;
-    width: 50vw;
+    justify-content: center;
+    align-items: center;
+    width: 45vw;
 }
 
 input, textarea{
     width: 45vw;
     height: 5vh;
     background-color: white;
-    font-size: 24px;
+    font-size: 22px;
     border: none;
     border-bottom: 1px solid lightgray;
     outline: none;
@@ -208,6 +210,57 @@ textarea{
     background-color: #7FD4BF;
     border: none;
     border-radius: 5px;
+    margin-bottom: 8vh;
     margin-right: auto;
+}
+/*End of Contact section*/
+
+/*Start of Reach us section*/
+.reachus_section{
+    padding: 8vh 15vw;
+    background-color: #2D3E4F;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content:space-between;
+    text-align: center;
+}
+
+.reachus{
+    color:white;
+    width: 25vw;
+}
+
+.reachus p{
+    padding-top: 2vh;
+    font-size: 20px;
+    line-height: 4vh;
+}
+
+.socialmedia{
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    margin-top: 2vh;
+    background-color: transparent;
+    border: 2px solid white;
+    outline: none;
+    color: white;
+    border-radius: 50%;
+
+}
+
+.socialmedia:hover{
+    background-color: white;
+    border: 2px solid white;
+    color: #2D3E4F;
+}
+
+a{
+    color:#17BC9B;
+}
+
+a:hover{
+    color:#12987d;
 }
 
