@@ -111,8 +111,8 @@ nav h1{
 .images img{
     width: 24rem;
     height: 18rem;
-    padding: 1.5vh 1vw;
-    border-radius: 8%;
+    padding: 1.5vh 1.5vw;
+    border-radius: 2rem;
 }
 
 .sub_title{
@@ -275,40 +275,23 @@ footer{
     padding: 3vh;
 }
 
-@media screen and (max-width: 1400px) {
-    .hero_section{
-        padding: 10vh 15vw;
-    }
-
-    .images img{
-        width: 20rem;
-        height: 14rem;
-    } 
-}
-
-@media screen and (max-width: 1200px) {
-    .hero_section{
-        padding: 10vh 15vw;
-    }
-
-    .images{
-        padding: 0 10vw;
-    }
-
+@media screen and (max-width: 1400px){
     .images img{
         width: 18rem;
         height: 14rem;
-    } 
+        padding: 1vh 1vw;
+        border-radius: 20px;
+    }  
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1000px) {
     .hero_image{
-        width: 48vw;
-        height: 48vh;
+        width: 20rem;
+        height: 16rem;
     }
 
     .title{
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .divider{
@@ -320,7 +303,7 @@ footer{
     }
 
     .images img{
-        width: 20rem;
+        width: 18rem;
         height: 14rem;
     } 
 
@@ -350,6 +333,17 @@ footer{
     .reachus{
         width: 80vw;
     }
+}
+
+@media screen and (max-width: 780px) {
+    .title{
+        font-size: 2rem;
+    }
+
+    .images img{
+        width: 26rem;
+        height: 18rem;
+    } 
 }
 
 
