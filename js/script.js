@@ -1,46 +1,76 @@
 //Initialize variables
-let username = document.getElementById("fullname").value;
-let phoneNumber = document.getElementById("phone_number").value;
-let email = document.getElementById("email").value;
-let message = document.getElementById("message").value;
-let error = document.getElementById("error").value;
-let submitButton = document.getElementById("submit");
+const username = document.getElementById("fullname");
+const phoneNumber = document.getElementById("phone_number");
+const email = document.getElementById("email");
+const message = document.getElementById("message");
+const error = document.getElementById("error");
+const submitButton = document.getElementById("submit");
 
-function validateName(username, error){
-    if(typeof username !== "string" || /[^A-Za-z]+/g.test(username) || username == ""){
-        error.textContent="Error: Invalid username"
+submitButton.addEventListener("click", (event)=>{
+    if(!validateName() || !validateEmail() || !validatePhoneNumber() || !validateMessage()){
+        return
     }
-    else if(username.trim().length() < 5){
-        error.textContent="Error: Name should have a minimum of 5 characters"
+    else{
+        error.textContent="Submitted!"
     }
+})
+
+function validateName(){
+    if(username.value == ""){
+        error.textContent="Error: Missing field" 
+        return false
+    }
+    else if(typeof username.value !== "string"){
+        error.textContent="Error: Invalid name";
+        return false
+    }
+    else if(username.value.trim().length < 5){
+        error.textContent="Error: Name should have a minimum of 5 characters";
+        return false
+    }
+    return true
 }
 
-function validateEmail(email, error){
-    if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email) || 
-    email.substring(0,email.indexOf("@")).length < 3 ||
-    email.substring(email.indexOf("@") + 1,email.length).length < 5
-    ){
+function validateEmail(){
+    if(email.value == ""){
+        error.textContent="Error: Missing field" 
+        return false
+    }
+    else if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value) || 
+    email.value.substring(0,email.value.indexOf("@")).length < 3 ||
+    email.value.substring(email.value.indexOf("@") + 1,email.value.length).length < 5){
         error.textContent="Error: Invalid email";
+        return false
     }
+    return true
 }
 
-function validatePhoneNumber(phoneNumber, error){
-    if(phoneNumber.substring(0,3).length != "+961"){
+function validatePhoneNumber(){
+    if(phoneNumber.value == ""){
+        error.textContent="Error: Missing field" 
+        return false
+    }
+    else if(phoneNumber.value.substring(0,3) != "961"){
         error.textContent="Error: Invalid country code"
+        return false
     }
-    else if(phoneNumber.substring(4, phoneNumber.length).length > 8 || 
-    phoneNumber.substring(4, phoneNumber.length).length < 7){
-        error.textContent="Error: Phone number should be 7 or 8 digits"
-    }
-    else if((phoneNumber.substring(4, phoneNumber.length) == 7 && phoneNumber[4] != "3") ||
-    (phoneNumber.substring(4, phoneNumber.length) == 8 && (phoneNumber.substring(4,6) != "71" || phoneNumber.substring(4,6) != "76" || phoneNumber.substring(4,6) != "70")
-    )){
+    else if((phoneNumber.value.substring(3, phoneNumber.value.length) == 7 && phoneNumber.value[4] != "3") ||
+    (phoneNumber.value.substring(3, phoneNumber.value.length) == 8 && (phoneNumber.value.substring(4,6) != "71" || phoneNumber.value.substring(4,6) != "76" || phoneNumber.value.substring(4,6) != "70"))){
         error.textContent="Error: Invalid phone number"
+        return false
     }
+    else if(phoneNumber.value.substring(3, phoneNumber.value.length).length > 8 || 
+    phoneNumber.value.substring(3, phoneNumber.value.length).length < 7){
+        error.textContent="Error: Phone number should be 7 or 8 digits"
+        return false
+    }
+    return true
 }
 
-function ValidateMessage(message, error){
-    if(message.trim().length < 100){
+function validateMessage(){
+    if(message.value.trim().length < 100){
         error.textContent="Error: Minimum message is 100 characters"
+        return false
     }
+    return true
 }

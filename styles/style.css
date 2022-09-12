@@ -276,6 +276,14 @@ textarea{
     margin-bottom: 8vh;
     margin-right: auto;
 }
+
+.error{
+    background-color: rgb(233, 108, 108);
+    color: white;
+    border: none;
+    font-size: 18px;
+    margin-bottom: 4vh;
+}
 /*End of Contact section*/
 
 /*Start of Reach us section*/
