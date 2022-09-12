@@ -275,6 +275,7 @@ footer{
     padding: 3vh;
 }
 
+/*Fixing Responsiveness using media query*/
 @media screen and (max-width: 1400px){
     .images img{
         width: 18rem;
