@@ -16,7 +16,7 @@ nav{
     background-color: #2D3E4F;
     color: white;
     text-transform: uppercase;
-    padding: 3.5vh 11vw;
+    padding: 3.5vh 10vw;
     font-weight: bold;
 }
 
@@ -26,11 +26,12 @@ nav h1{
 
 .menu{
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
 }
 
 .option{
     font-size: 16px;
-    float: left;
     padding: 0 1vw;
 }
 /*End of nav section*/
@@ -46,7 +47,7 @@ nav h1{
     color: white;
 }
 
-.hero_section img{
+.hero_image{
     width: 26vw;
     height: 26vh;
 }
@@ -87,7 +88,7 @@ nav h1{
 
 /*Start of Portfolio section*/
 .portfolios_section{
-    padding: 0 11vw;
+    padding: 0 10vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -102,13 +103,14 @@ nav h1{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     padding-bottom: 8vh;
-    flex: 1 1 35vw;
 }
 
 .images img{
-    width: 24vw;
-    height: 30vh;
+    width: 24rem;
+    height: 18rem;
     padding: 1.5vh 1vw;
     border-radius: 8%;
 }
@@ -229,6 +231,7 @@ textarea{
 .reachus{
     color:white;
     width: 25vw;
+    margin-bottom: 3vh;
 }
 
 .reachus p{
@@ -271,4 +274,82 @@ footer{
     text-align: center;
     padding: 3vh;
 }
+
+@media screen and (max-width: 1400px) {
+    .hero_section{
+        padding: 10vh 15vw;
+    }
+
+    .images img{
+        width: 20rem;
+        height: 14rem;
+    } 
+}
+
+@media screen and (max-width: 1200px) {
+    .hero_section{
+        padding: 10vh 15vw;
+    }
+
+    .images{
+        padding: 0 10vw;
+    }
+
+    .images img{
+        width: 18rem;
+        height: 14rem;
+    } 
+}
+
+@media screen and (max-width: 780px) {
+    .hero_image{
+        width: 48vw;
+        height: 48vh;
+    }
+
+    .title{
+        font-size: 2rem;
+    }
+
+    .divider{
+        width: 26vw;
+    }
+
+    .hero_section p{
+        font-size: 1.2rem;
+    }
+
+    .images img{
+        width: 20rem;
+        height: 14rem;
+    } 
+
+    .info{
+        flex-direction: column;
+    }
+
+    .info p{
+        width: 80vw;
+        padding-bottom: 2vh;
+    }
+
+    .contact_info{
+        width: 80vw;
+    }
+
+    input, textarea{
+        width: 80vw;
+    }
+
+    .reachus_section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .reachus{
+        width: 80vw;
+    }
+}
+
 
