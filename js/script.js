@@ -5,6 +5,7 @@ const email = document.getElementById("email");
 const message = document.getElementById("message");
 const error = document.getElementById("error");
 const submitButton = document.getElementById("submit");
+const addMessageAPI = "http://localhost/bootstrap_template/backend/add_message.php";
 
 //When the button is clicked, validate input
 submitButton.addEventListener("click", (event)=>{
@@ -12,9 +13,17 @@ submitButton.addEventListener("click", (event)=>{
     if(!validateName() || !validateEmail() || !validatePhoneNumber() || !validateMessage()){
         return
     }
-    else{
-        error.textContent="Submitted!"
-    }
+
+    //Send the data to the database using POST method
+    fetch(addMessageAPI, {
+        method: 'POST',
+        body: new URLSearchParams({ "full_name": username.value,
+        "phone_number": phoneNumber.value,
+        "email": email.value,
+        "message": message.value}),
+    })
+    .then(response=>response.json())
+    .then(data => error.textContent = data.success)
 })
 
 function validateName(){
