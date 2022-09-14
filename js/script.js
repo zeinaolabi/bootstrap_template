@@ -23,7 +23,7 @@ submitButton.addEventListener("click", (event)=>{
         "message": message.value}),
     })
     .then(response=>response.json())
-    .then(data => error.textContent = (data.success == "true" ? "Failed to submit" : "Submitted"))
+    .then(data => error.textContent = data.success)
 })
 
 function validateName(){
