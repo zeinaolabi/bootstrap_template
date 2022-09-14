@@ -8,7 +8,7 @@ fetch(showMessagesAPI)
 .then(data => {
     for(var i = 0; i < data.length; i++){
         //Create an empty
-        var row = table.insertRow(i);
+        var row = table.insertRow(i+1);
 
         //insert cells
         let name_row = row.insertCell(0);
@@ -23,3 +23,4 @@ fetch(showMessagesAPI)
         message_row.innerHTML = data[i].message;
     }
 })
+
