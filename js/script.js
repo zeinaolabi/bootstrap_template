@@ -6,7 +6,6 @@ const message = document.getElementById("message");
 const error = document.getElementById("error");
 const submitButton = document.getElementById("submit");
 const addMessageAPI = "http://localhost/bootstrap_template/backend/add_message.php";
-const showMessagesAPI = "http://localhost/bootstrap_template/backend/get_message.php"
 
 //When the button is clicked, validate input
 submitButton.addEventListener("click", (event)=>{
@@ -24,7 +23,7 @@ submitButton.addEventListener("click", (event)=>{
         "message": message.value}),
     })
     .then(response=>response.json())
-    .then(data => error.textContent = data.success)
+    .then(data => error.textContent = (data.success == "true" ? "Failed to submit" : "Submitted"))
 })
 
 function validateName(){
