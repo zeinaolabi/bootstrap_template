@@ -8,7 +8,7 @@ $phoneNumber = $_POST["phone_number"];
 $message = $_POST["message"];
 
 $query = $mysqli->prepare("INSERT INTO messages(full_name, email, phone_number, message) VALUES  (?, ?, ?, ?)");
-$query->bind_param("ssis", $fullName, $email, $phoneNumber, $message);
+$query->bind_param("ssss", $fullName, $email, $phoneNumber, $message);
 $query->execute();
 
 $response = [];
